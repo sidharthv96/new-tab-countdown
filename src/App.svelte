@@ -39,7 +39,9 @@
 	class="relative flex h-screen w-screen flex-col items-center justify-center overflow-hidden p-4 tracking-wider dark:text-gray-400"
 >
 	<DarkModeToggle />
-	<About {isInstalled} />
+	{#if !isInstalled}
+		<About />
+	{/if}
 	<CountdownList
 		bind:countdownList
 		intervalDuration={COUNTDOWN_INTERVAL_DURATION}
