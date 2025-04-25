@@ -7,6 +7,7 @@
 	import type { StoredCountdown } from '$lib/utils/types';
 	import { ModeWatcher } from 'mode-watcher';
 	import { onMount } from 'svelte';
+	import './app.css';
 
 	const COUNTDOWN_INTERVAL_DURATION = 100;
 	const MAX_NUM_COUNTDOWN = 5;
