@@ -1,11 +1,21 @@
-**Local Development**
+# New Tab Countdown, with dark mode
 
-`npm install`
+This is an extension that displays multiple countdowns on your new tab page.
+It is forked from [New Tab Countdown](https://github.com/new-tab-countdown/new-tab-countdown) by [Sebastian Liu](https://sebastian-liu.com/), with dark mode, and an increased countdown limit.
 
-`webpack [--watch]`
+## Developing
 
-Navigate to `chrome://extensions` and `Load unpacked extension...` (make sure `Developer mode` is enabled). 
+```bash
+pnpm dev
 
-**To Test**
+# or start the server and open the app in a new browser tab
+pnpm dev -- --open
+```
 
-`npm test`
+## Building
+
+To create a production version of your app:
+
+```bash
+pnpm build
+```

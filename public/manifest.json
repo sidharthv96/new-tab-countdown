@@ -1,7 +1,7 @@
 {
 	"name": "New Tab Countdown v2 - With dark mode",
 	"description": "Countdown time remaining in the day, week, month, year, or a custom date. Now with dark mode.",
-	"version": "0.0.1",
+	"version": "1.0.0",
 	"manifest_version": 3,
 	"icons": {
 		"48": "Clock-48.png",
