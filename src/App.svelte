@@ -19,7 +19,6 @@
 	$effect(() => {
 		if (isInitialized && countdownList.length > 0) {
 			storage.set('countdownList', countdownList);
-			console.log('countdownList', countdownList);
 		}
 	});
 
