@@ -8,19 +8,28 @@ interface StorageInterface {
 class ChromeStorage implements StorageInterface {
 	get<T>(key: string, defaultValue: T, callback: StorageCallback<T>) {
 		if (window.chrome?.storage?.sync) {
-			window.chrome.storage.sync.get({ [key]: defaultValue }, (items: Record<string, unknown>) => {
-				callback(items[key] as T);
+			window.chrome.storage.sync.get(key, (items: Record<string, unknown>) => {
+				const value = items[key];
+				if (value !== undefined) {
+					callback(value as T);
+					return;
+				}
+				this.set(key, defaultValue, () => {
+					callback(defaultValue);
+				});
 			});
 		} else {
 			callback(defaultValue);
 		}
 	}
 
-	set<T>(key: string, value: T, callback?: () => void) {
+	set<T>(key: string, value: T, callback: () => void = () => {}) {
 		if (window.chrome?.storage?.sync) {
-			window.chrome.storage.sync.set({ [key]: value }, callback);
+			// Need to do this to avoid issues when storing arrays wrapped in proxies
+			const storageValue = Array.isArray(value) ? [...value] : value;
+			window.chrome.storage.sync.set({ [key]: storageValue }, callback);
 		} else {
-			if (callback) callback();
+			callback();
 		}
 	}
 }

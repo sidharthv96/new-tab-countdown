@@ -19,7 +19,8 @@
 		"baseUrl": ".",
 		"paths": {
 			"$lib/*": ["src/lib/*"]
-		}
+		},
+		"types": ["chrome"]
 	},
 	"include": ["src/**/*.ts", "src/**/*.js", "src/**/*.svelte"]
 }
