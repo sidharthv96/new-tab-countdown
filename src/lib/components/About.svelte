@@ -4,7 +4,7 @@
 	<div class="flex gap-1.5 pt-1.25 text-[0.65em]">
 		<a
 			class="cursor-pointer no-underline hover:underline"
-			href="https://chrome.google.com/webstore/detail/new-tab-countdown/pbeiaielhjhfdpnonbbincehnanaehon"
+			href="https://chromewebstore.google.com/detail/new-tab-countdown-v2-with/dclncaninnadnnbgonljphdegnmipoam"
 			target="_blank"
 		>
 			download

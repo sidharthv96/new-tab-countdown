@@ -36,7 +36,7 @@
 <ModeWatcher />
 
 <div
-	class="relative flex h-screen w-screen flex-col items-center justify-center overflow-hidden p-4 tracking-wider dark:text-gray-400"
+	class="relative flex h-screen w-screen flex-col items-center justify-center overflow-hidden p-4 font-mono tracking-wide dark:text-gray-400"
 >
 	<DarkModeToggle />
 	{#if !isInstalled}

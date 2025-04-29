@@ -86,7 +86,7 @@
 	>
 		<CustomDateInput onSubmit={handleCustomDateSubmit} />
 	</Dropdown>
-	<span class="-ml-2">.</span>
+	<span class="-ml-4">.</span>
 	<span class="inline-block">
 		<DeleteCountdown shouldShow={enableDeleteCountdown} onDelete={deleteCountdown} />
 	</span>
